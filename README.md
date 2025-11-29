@@ -11,11 +11,7 @@ This repository contains a backup of the remagine.com WordPress website, archive
 
 ## WordPress Configuration
 
-**Database Credentials:**
-- Database Name: `remagine`
-- Database User: `remagine`
-- Database Password: `robotfrog101`
-- Database Host: `localhost`
+Database credentials can be found in `public_html/wp-config.php` if needed for local restoration.
 
 ## Server Information
 
