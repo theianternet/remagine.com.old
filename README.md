@@ -22,13 +22,14 @@ Database credentials can be found in `public_html/wp-config.php` if needed for l
 ## Large Files Excluded
 
 The following files are excluded from git due to size (>50MB):
-- `remagine_files_backup.tar.gz` (464MB) - Complete compressed backup
+- `remagine_files_backup.tar.gz` (450MB) - Complete compressed backup
 
 ## Project Size
 
-- Total: ~1.0GB
-- WordPress files: 581MB
-- Database: 21MB
+- Total: ~1.3GB (includes .git directory)
+- WordPress files: 452MB
+- Database backup: 21MB
+- Compressed backup (excluded from git): 450MB
 
 ## Notes
 
