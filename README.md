@@ -6,7 +6,6 @@ This repository contains a backup of the remagine.com WordPress website, archive
 
 - `public_html/` - Complete WordPress installation and website files
 - `remagine_db_backup_2025-11-29_10-03.sql` - MySQL database backup (21MB)
-- `macri/` - Additional archived files
 - `.gitignore` - Excludes large files (>50MB) from version control
 
 ## WordPress Configuration
@@ -23,7 +22,6 @@ Database credentials can be found in `public_html/wp-config.php` if needed for l
 ## Large Files Excluded
 
 The following files are excluded from git due to size (>50MB):
-- `macri/Macri_History1.zip` (90MB)
 - `remagine_files_backup.tar.gz` (464MB) - Complete compressed backup
 
 ## Project Size
