@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="63"
+   name=""
+   committed-date="2007-08-01T17:19:47.539816Z"
+   url="https://web-shell.googlecode.com/svn/trunk/www"
+   last-author="mressl"
+   kind="dir"
+   repos="https://web-shell.googlecode.com/svn"
+   revision="63"/>
+<entry
+   committed-rev="63"
+   name="enter.png"
+   text-time="2007-08-01T07:43:58.000000Z"
+   committed-date="2007-08-01T17:19:47.539816Z"
+   checksum="acfbb1d3355fc361cd3213e7d2ec0e7e"
+   last-author="mressl"
+   kind="file"
+   prop-time="2007-08-01T17:18:18.000000Z"/>
+<entry
+   committed-rev="63"
+   name="shift.png"
+   text-time="2007-08-01T07:43:58.000000Z"
+   committed-date="2007-08-01T17:19:47.539816Z"
+   checksum="0b6a3e26f244593ef1cee34608fe8896"
+   last-author="mressl"
+   kind="file"
+   prop-time="2007-08-01T17:18:18.000000Z"/>
+<entry
+   committed-rev="63"
+   name="webshell.js"
+   text-time="2007-08-01T17:41:46.000000Z"
+   committed-date="2007-08-01T17:19:47.539816Z"
+   checksum="476b614dc84c75d87c0446482d4f34ad"
+   last-author="mressl"
+   kind="file"/>
+<entry
+   committed-rev="63"
+   name="cell.png"
+   text-time="2007-08-01T07:43:58.000000Z"
+   committed-date="2007-08-01T17:19:47.539816Z"
+   checksum="8c78f6911e30809ca7edd565e7c6ec0a"
+   last-author="mressl"
+   kind="file"
+   prop-time="2007-08-01T17:18:18.000000Z"/>
+<entry
+   committed-rev="63"
+   name="back.png"
+   text-time="2007-08-01T07:43:58.000000Z"
+   committed-date="2007-08-01T17:19:47.539816Z"
+   checksum="975e902df33dbfab031c3c8f50065e8d"
+   last-author="mressl"
+   kind="file"
+   prop-time="2007-08-01T17:18:18.000000Z"/>
+<entry
+   committed-rev="63"
+   name="cells.png"
+   text-time="2007-08-01T07:43:58.000000Z"
+   committed-date="2007-08-01T17:19:47.539816Z"
+   checksum="3b3883d44969c1850d87fdd18b2c88b7"
+   last-author="mressl"
+   kind="file"
+   prop-time="2007-08-01T17:18:18.000000Z"/>
+<entry
+   committed-rev="63"
+   name="delete.png"
+   text-time="2007-08-01T07:43:58.000000Z"
+   committed-date="2007-08-01T17:19:47.539816Z"
+   checksum="e0cfb177af63134fef6e84a76bd6f7d2"
+   last-author="mressl"
+   kind="file"
+   prop-time="2007-08-01T17:18:18.000000Z"/>
+<entry
+   committed-rev="64"
+   name="webshell.html"
+   text-time="2007-08-01T18:01:42.000000Z"
+   committed-date="2007-08-01T18:16:19.605812Z"
+   checksum="943daa6a603f04fe51a797322c4887f6"
+   last-author="mressl"
+   kind="file"
+   revision="64"/>
+<entry
+   committed-rev="66"
+   name="webshell.css"
+   text-time="2007-08-01T18:21:15.000000Z"
+   committed-date="2007-08-01T18:21:28.338494Z"
+   checksum="12b5b5a0ee4a6d2c487360b569fbbb5a"
+   last-author="mressl"
+   kind="file"
+   revision="66"/>
+<entry
+   committed-rev="63"
+   name="background.jpg"
+   text-time="2007-08-01T07:43:58.000000Z"
+   committed-date="2007-08-01T17:19:47.539816Z"
+   checksum="b2d219d2c0b496f32918eee0b43dbf5d"
+   last-author="mressl"
+   kind="file"
+   prop-time="2007-08-01T17:18:18.000000Z"/>
+</wc-entries>

@@ -1,0 +1,313 @@
+<html><head>
+
+<script>
+function openTarget (form, features, windowName) {
+  if (!windowName)
+    windowName = 'formTarget' + (new Date().getTime());
+  form.target = windowName;
+  open ('', windowName, features);
+}
+</script>
+<link rel="stylesheet" href="gallery.ssf_files/pg.css" type="text/css">
+<script language="javascript" src="gallery.ssf_files/Pop.js"></script><title>MassLive.com: Photo Galleries</title>
+
+<script type="text/javascript">
+var imageServer = 'photo.live.advance.net';
+if (document.location.href.indexOf('.dev.') > -1) {
+        imageServer = 'photo.dev.advance.net';
+}
+
+
+var DOMUsed = (document.getElementById)? true:false;
+
+// galleryImage constructor
+// ------------------------
+function galleryImage(source, title, caption, credit) {
+	// Set Image SRC, Title and Caption.
+	this.source  = source;
+	this.title   = title,
+	this.caption = caption;
+	this.credit  = credit;
+
+	// Image Object refs.
+	// this.fullImg = null;
+	// this.tnImg   = null;
+}
+
+// Create galleryImage Array.
+// --------------------------
+
+var galleryImages = new Array(
+new galleryImage("/mass/images/3701/01.jpg", "", "Matthieu Moss of Charlemont ponders his next move against Antonio Laudati of Florence during the Western Mass. Chess Association's tournament at Al Boutin Community Center in Chicopee. Moss won the match.", "Republican Photo: Jessica Hill"),
+new galleryImage("/mass/images/3701/02.jpg", "", "Christina Kiely, 10, of Amherst, rides a modified bicycle as her mother Mary watches during an open house for Project RIDE at the Springfield Jewish Community Center.", "Republican Photo: Marla Pinsky"),
+new galleryImage("/mass/images/3701/03.jpg", "", "Emily Tyler, 9, of Longmeadow rides a modified bicycle as her father John watches during the Project RIDE open house.", "Republican Photo: Marla Pinsky"),
+new galleryImage("/mass/images/3701/04.jpg", "", "Ian Ricci, left, and   Chris Walker-Ray, Springfield Technical Community College students with their computer software that they both developed, on the screens in front of them. ", "Republican Photo: Mark M. Murray"),
+new galleryImage("/mass/images/3701/05.jpg", "", "The International Association  of Bridge, Structural and Ornamental Ironworkers Local 7 guides a beam into place during the topping off ceremony for the $55 million federal courthouse construction project.", "Republican Photo: Mark M. Murray"),
+new galleryImage("/mass/images/3701/07.jpg", "", "Chicopee Main Library custodian Clifford Chapdelaine of Chicopee makes his way through the endless isles of books keeping dust under control. Chapdelaine says he makes these rounds once a week and it takes 8-10 hours to complete the entire library.", "Republican Photo: John Suchocki"),
+new galleryImage("/mass/images/3701/08.jpg", "", "Denise L. Courtney, of Northampton, a sales associate atParty World and Kilkelly Cottage in Northampton, tries on a green top hat that is part of the Irish merchandise on display in the store. ", "Republican Photo: Bob Stern"),
+new galleryImage("/mass/images/3701/11.jpg", "", "Smith Vocational and Agricultural School student Drew Morse, far right, and other members of the Forestry and Horticulture Dept. give a demonstration to visiting prospective parents and prosepective students at the school's annual open house.", "Republican Photo: David Molnar"),
+new galleryImage("/mass/images/3701/12.jpg", "", "&quot;Buster&quot; the Monson Public Library cat couldn't care less about the upcoming tax deadline. He snuggles down for a nap on his favorite bench. Buster spends his weekdays surveying the library and its workings, but goes home with a couple on weekends.", "Republican Photo: Mieke Zuiderweg"),
+new galleryImage("/mass/images/3701/13.jpg", "", "Construction is under way at Six Flags amusement park on Splash Waterfalls.", "Republican Photo: Michael S. Gordon"),
+new galleryImage("/mass/images/3701/14.jpg", "", "Richard Tynan and his granddaughter Emma Tynan, 8, both of Springfield, enjoy the Springfield St. Patrick's Parade Marshal's Reception at the John Boyle O'Reilly Club in Springfield.", "Republican Photo: Marla Pinsky")
+);
+var totalImages = galleryImages.length;
+
+// Current Image:
+// --------------
+// Array index 0..N in galleryImages.
+var currentImage = (1 - 1);
+if (currentImage >=  totalImages) currentImage = totalImages - 1;
+if (currentImage < 0) currentImage = 0;
+
+var imgTitle;
+var imgCaption;
+
+// Filmstrip:
+var thumbCount = Math.min(11, 7);
+// Left Thumnail
+var leftThumbImage = currentImage;
+
+//---------------------------------------
+
+// onError: Image URL not found; use spacer GIF.
+function setBlankImg() {
+	this.src = '/images/spacer.gif';
+}
+
+function loadImage(gImg) {
+	// Load Slide image.
+	if (null == gImg.fullImg) {
+		gImg.fullImg = new Image();
+		gImg.fullImg.onerror = setBlankImg;
+                gImg.fullImg.src = '/cgi-bin/prxy/photogalleries/nph-cache.cgi/cache=3000;' + gImg.source;
+	}
+
+	// Load Thumbnail.
+	if (null == gImg.tnImg) {
+		gImg.tnImg = new Image();
+		gImg.tnImg.onerror = setBlankImg;
+		gImg.tnImg.src = '/cgi-bin/prxy/photogalleries/nph-cache.cgi'
+			+ gImg.source.substring(0, gImg.source.lastIndexOf('.'))
+			+ '_tn'
+			+ gImg.source.substring(gImg.source.lastIndexOf('.'), gImg.source.length);
+	}
+}
+
+function loadGalleryImages(imgIndex) {
+	// Load thumbCount Images at a time; thumbCount plus 2 before and after.
+	if (0 == imgIndex) { imgIndex = totalImages - 1; }
+	if (1 == imgIndex) { imgIndex = totalImages; }
+	for (var k = 0; k < Math.min(thumbCount + 4, totalImages); k++) {
+		gImg = galleryImages[(imgIndex + k - 2) % totalImages];
+		loadImage(gImg);
+	}
+}
+
+function loadGallery() {
+	loadGalleryImages(leftThumbImage);
+
+	setSlideImage(currentImage);
+
+	// Set current left thumb.
+	leftThumbImage = currentImage;
+	setThumbImages(leftThumbImage);
+}
+
+function sendEcard(theForm) {
+	theForm.photo.value = galleryImages[currentImage].source;
+}
+
+function countView() {
+	var pageview = new Image();
+	pageview.src = '/cgi-bin/stats/tracking.cgi?REWRITE_PAGE=' + window.location.pathname + '&random=' + Math.random();
+        var vspageview = new Image();
+        vspageview.src = '/cgi-bin/stats/rewrite.cgi?page=' + escape (document.location) + '&referrer=' + escape(document.location) + '&Log=1&random=' + Math.random();
+}
+
+function setSlideImage(imgIndex) {
+	// Set Slideshow image.
+ 	document.images['slideImg'].src = '/cgi-bin/prxy/photogalleries/nph-cache.cgi/cache=3000;' + galleryImages[imgIndex].source;
+
+	var title = galleryImages[imgIndex].title;
+	var caption = galleryImages[imgIndex].caption;
+	var credit = galleryImages[imgIndex].credit;
+
+	if (DOMUsed) {
+		document.getElementById('imgTitle').innerHTML = title;
+		document.getElementById('imgCaption').innerHTML = caption;
+		document.getElementById('imgCredit').innerHTML = credit;
+
+		document.getElementById('imgCurrNumber').innerHTML = currentImage + 1;
+	}
+	else {
+		document.forms.imgInfoForm.imgInfoText.value =
+			'Title: ' + title + '\n'
+			+ 'Caption: ' + caption + '\n'
+			+ 'Credit: ' + credit + '\n'
+	}
+}
+
+function setThumbImages(imgIndex) {
+	// Set thumbCount Thumb Images; imgIndex is first.
+	for (var k = 0; k < thumbCount; k++) {
+		gImg = galleryImages[(imgIndex + k) % totalImages];
+		document.images['thumbImg' + k].src = gImg.tnImg.src;
+	}
+}
+
+// Next and Previous Slides
+function viewNext() {
+	currentImage = (++currentImage) % totalImages;
+	loadGalleryImages(currentImage);
+
+	setSlideImage(currentImage);
+
+	countView();
+
+	// Set current left thumb.
+	leftThumbImage = currentImage;
+	setThumbImages(leftThumbImage);
+}
+
+function viewPrevious() {
+	currentImage = (--currentImage) % totalImages;
+	if (currentImage < 0) currentImage = totalImages - 1;
+	loadGalleryImages(currentImage);
+
+	setSlideImage(currentImage);
+
+	countView();
+
+	// Set current left thumb.
+	leftThumbImage = currentImage;
+	setThumbImages(leftThumbImage);
+}
+
+function viewFirst() {
+	currentImage = 1; // (1 - 1) = 0, or first.
+	viewPrevious();
+	countView();
+}
+
+// Filmstrip: Right and Left arrows
+function viewRightArrow() {
+	leftThumbImage = (++leftThumbImage) % totalImages;
+	loadGalleryImages(leftThumbImage);
+
+	setThumbImages(leftThumbImage);
+}
+
+function viewLeftArrow() {
+	leftThumbImage = (--leftThumbImage) % totalImages;
+	if (leftThumbImage < 0) leftThumbImage = totalImages - 1;
+	loadGalleryImages(leftThumbImage);
+
+	setThumbImages(leftThumbImage);
+}
+
+// Set slide image to thumbNumber: 0..(thumbCount-1).
+function viewThumb(thumbNumber) {
+	currentImage = (leftThumbImage + thumbNumber) % totalImages;
+	loadGalleryImages(leftThumbImage);
+
+	// Set current slide.
+	setSlideImage(currentImage);
+
+	countView();
+}
+
+loadGalleryImages(currentImage);
+
+</script></head><body onload="loadGallery();" bgcolor="#696c73">
+<table class="header" bgcolor="#d7d8db" border="0" cellpadding="0" cellspacing="0" width="615">
+<tbody><tr>
+<td width="10">&nbsp;</td>
+<td align="right" width="143"><a href="http://www.masslive.com/" target="_blank"><img src="gallery.ssf_files/sitename.gif" border="0" height="22" width="143"></a></td>
+<td width="5">&nbsp;</td>
+<td width="447"><h2><i>The Republican</i> Photos</h2></td>
+<td width="10">&nbsp;</td>
+</tr>
+</tbody></table>
+<table class="cwe" bgcolor="#696c73" border="0" cellpadding="0" cellspacing="0" width="615">
+<tbody><tr><td colspan="4" width="615"><img src="gallery.ssf_files/spacer.gif" height="1" vspace="2" width="1"></td></tr>
+<tr valign="top">
+<td rowspan="2" width="412">
+<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" height="412" width="412">
+<tbody><tr>
+<td align="center" width="412"><div style="margin: 5px 0px;"><img src="gallery.ssf_files/04.jpg" name="slideImg" style="border-color: rgb(0, 0, 0);" border="1"></div></td>
+</tr>
+</tbody></table></td>
+<td rowspan="2" width="5">&nbsp;</td>
+<td width="193"><div style="margin: 20px 0px 0px;">
+<script type="text/javascript">
+if (DOMUsed) {
+	document.write(
+		'<b><span id="imgTitle"></span></b><br>\n' +
+		'<span id="imgCaption"></span><br><img src=/images/spacer.gif width=1 height=1 vspace=2><br>' +
+		'<s><span id="imgCredit"></span></s>');
+}
+else {
+	document.write(
+		'<form name="imgInfoForm">'
+		+ '<textarea name="imgInfoText" rows=5 cols=30 wrap="virtual"></textarea></form>\n');
+}
+</script><b><span id="imgTitle"></span></b><br>
+<span id="imgCaption">Ian Ricci, left, and Chris Walker-Ray,
+Springfield Technical Community College students with their computer
+software that they both developed, on the screens in front of them. </span><br><img src="gallery.ssf_files/spacer.gif" height="1" vspace="2" width="1"><br><s><span id="imgCredit">Republican Photo: Mark M. Murray</span></s>
+</div></td>
+<td width="5">&nbsp;</td>
+</tr>
+<tr valign="bottom">
+<td colspan="2" width="198">
+<div class="sr"><script language="JavaScript1.1" src="gallery.ssf_files/FrameTile1.js">
+</script><a href="http://ads1.udc.advance.net/RealMedia/ads/click_lx.ads/www.masslive.com/republican/photos/gallery.ssf/1703627384/FrameTile1/MASSLIVE/MK_AUTOS_MA02/BLA_MassC6_190x90.gif/34383133346464393434313631396630" target="_blank"><img src="gallery.ssf_files/BLA_MassC6_190x90.gif" alt="" border="0"></a><div style="overflow: hidden; position: absolute; z-index: auto; width: 1px; height: 1px;"><img id="FrameTile1/MASSLIVE/MK_AUTOS_MA02/BLA_MassC6_190x90.gif" class="OAS_counter" src="gallery.ssf_files/34383133346464393434313631396630.gif" height="2" width="2"></div>
+<script language="JavaScript">
+if (parseFloat(navigator.appVersion) == 0) {
+document.write('<IFRAME WIDTH=468 HEIGHT=60 MARGINWIDTH=0 MARGINHEIGHT=0');
+document.write('HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR="#000000"');
+document.write('SRC="http://ads.advance.net/RealMedia/ads/adstream_sx.ads/www.masslive.com/republican/photos/gallery.ssf/@FrameTile1?g_id=3701"></iframe>');
+}
+</script></div>
+<table border="0" cellpadding="0" cellspacing="0" width="198">
+<tbody><tr><td colspan="3" bgcolor="#d7d8db" width="198"><img src="gallery.ssf_files/spacer.gif" height="1" width="1"></td></tr>
+<tr>
+<td colspan="3" width="198"><img src="gallery.ssf_files/spacer.gif" height="1" vspace="5" width="1"><br><span style="font-size: 12px;"><b><u>«</u> <a name="FirstImg" href="javascript:viewFirst();">First Photo</a></b></span></td>
+</tr>
+<tr><td colspan="3" width="198"><img src="gallery.ssf_files/spacer.gif" height="1" vspace="3" width="1"></td></tr>
+<tr>
+<td width="74"><span style="font-size: 12px;"><b><u>«</u> <a name="PrevImg" href="javascript:viewPrevious();">Previous</a></b></span></td>
+<td align="center" width="73"><span style="font-size: 12px;"><span id="imgCurrNumber">4</span> of 11</span></td>
+<td align="right" width="51"><span style="font-size: 12px;"><b><a name="nextImg" href="javascript:viewNext();">Next</a> <u>»</u></b></span></td>
+</tr>
+<tr><td colspan="3" width="198"><img src="gallery.ssf_files/spacer.gif" height="1" vspace="5" width="1"></td></tr>
+<tr><td colspan="3" bgcolor="#d7d8db" width="198"><img src="gallery.ssf_files/spacer.gif" height="1" width="1"></td></tr>
+</tbody></table></td>
+</tr>
+<tr>
+<td width="412"><img src="gallery.ssf_files/spacer.gif" height="1" vspace="2" width="1"></td>
+<td width="5"><img src="gallery.ssf_files/spacer.gif" height="1" width="1"></td>
+<td width="193"><img src="gallery.ssf_files/spacer.gif" height="1" width="1"></td>
+<td width="5"><img src="gallery.ssf_files/spacer.gif" height="1" width="1"></td>
+</tr>
+</tbody></table>
+<table bgcolor="#000000" border="0" cellpadding="0" cellspacing="0" width="615">
+<tbody><tr><td colspan="3" width="615"><img src="gallery.ssf_files/spacer.gif" height="1" vspace="2" width="1"></td></tr>
+<tr>
+<td align="center" width="25"><a name="leftArrow" href="javascript:viewLeftArrow();"><img src="gallery.ssf_files/arrow_large_left.gif" border="0" height="14" width="13"></a></td>
+<td>
+<table bgcolor="#000000" cellpadding="0" cellspacing="0"><tbody><tr>
+<script type="text/javascript">
+for (var k = 0; k < thumbCount; k++) {
+	document.write('<td width=72><a name="thumbLink'+k+'" href="javascript:viewThumb('+k+');">'
+	+ '<img name="thumbImg'+k+'" width=70 height=70  border=1 style="border-color: #FFF"></a></td><td width=10>&nbsp;</td>');
+}
+</script><td width="72"><a name="thumbLink0" href="javascript:viewThumb(0);"><img src="gallery.ssf_files/01_tn.jpg" name="thumbImg0" style="border-color: rgb(255, 255, 255);" border="1" height="70" width="70"></a></td><td width="10">&nbsp;</td><td width="72"><a name="thumbLink1" href="javascript:viewThumb(1);"><img src="gallery.ssf_files/02_tn.jpg" name="thumbImg1" style="border-color: rgb(255, 255, 255);" border="1" height="70" width="70"></a></td><td width="10">&nbsp;</td><td width="72"><a name="thumbLink2" href="javascript:viewThumb(2);"><img src="gallery.ssf_files/03_tn.jpg" name="thumbImg2" style="border-color: rgb(255, 255, 255);" border="1" height="70" width="70"></a></td><td width="10">&nbsp;</td><td width="72"><a name="thumbLink3" href="javascript:viewThumb(3);"><img src="gallery.ssf_files/04_tn.jpg" name="thumbImg3" style="border-color: rgb(255, 255, 255);" border="1" height="70" width="70"></a></td><td width="10">&nbsp;</td><td width="72"><a name="thumbLink4" href="javascript:viewThumb(4);"><img src="gallery.ssf_files/05_tn.jpg" name="thumbImg4" style="border-color: rgb(255, 255, 255);" border="1" height="70" width="70"></a></td><td width="10">&nbsp;</td><td width="72"><a name="thumbLink5" href="javascript:viewThumb(5);"><img src="gallery.ssf_files/07_tn.jpg" name="thumbImg5" style="border-color: rgb(255, 255, 255);" border="1" height="70" width="70"></a></td><td width="10">&nbsp;</td><td width="72"><a name="thumbLink6" href="javascript:viewThumb(6);"><img src="gallery.ssf_files/08_tn.jpg" name="thumbImg6" style="border-color: rgb(255, 255, 255);" border="1" height="70" width="70"></a></td><td width="10">&nbsp;</td>
+</tr></tbody></table>
+</td>
+<td align="center" width="25"><a name="RightArrow" href="javascript:viewRightArrow();"><img src="gallery.ssf_files/arrow_large_right.gif" border="0" height="14" width="13"></a></td>
+</tr>
+<tr><td colspan="3" width="615"><img src="gallery.ssf_files/spacer.gif" height="1" vspace="2" width="1"></td></tr>
+</tbody></table><table class="cwe" border="0" cellpadding="0" cellspacing="0" width="615">
+<tbody><tr><td align="center" width="615"><img src="gallery.ssf_files/spacer.gif" height="1" vspace="2" width="1"><br><font size="1">Click thumbnail to view larger image. Click arrows to see more photos.</font></td></tr></tbody></table>
+</body></html>

@@ -1,0 +1,4 @@
+AuthName "Zones"
+        AuthType Basic
+        AuthUserFile /home/remagine/.htpasswd
+        Require user zonetest

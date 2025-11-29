@@ -1,0 +1,4 @@
+AuthName "ORCHARD SPORTS AND WELLNESS CENTER"
+        AuthType Basic
+        AuthUserFile /home/remagine/public_html/clients/davidd/.htpasswd
+        Require user davidd

@@ -1,0 +1,3 @@
+<<TOUR_FORM>>
+<BR />
+<<TOUR_INFO>>

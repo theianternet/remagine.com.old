@@ -1,0 +1,51 @@
+@charset "utf-8";
+body, form {margin:0; padding:0;}
+html {height: 100%; margin-bottom: 1px;}
+a{text-decoration:none; color:#0f518a;}
+a:hover{text-decoration:underline;}
+a:link, a:visited {text-decoration: none; font-weight: normal;}
+a:hover {text-decoration: underline; font-weight: normal;}
+input.button{cursor:pointer;}
+p{margin-top:0; margin-bottom:5px;}
+img{border:0;}
+
+.page_bg{background:url(../images/page_bg.png) repeat-y center top; padding:0 18px;}
+.lft_panel{padding:0 0 0 20px; text-align:right;}
+.lft_panel a:hover{text-decoration:none; background:url(../images/lft_link_bg_h.gif) no-repeat left top; display:block; padding:10px 45px 10px 0; margin:0 0 0 2px;}
+.lft_panel a.active{text-decoration:none; background:url(../images/home/lft_link_bg_h.gif) no-repeat left top; display:block; padding:10px 45px 10px 0; margin:0 0 0 2px;}
+.lft_panel a img{padding:0; margin:0; border:0;}
+
+.drop_cat ul{list-style-type:none; padding:0; margin:0;}
+.drop_cat ul li{list-style-type:none; padding:0 10px 0 0; margin:0;}
+.drop_cat ul li ul{list-style-type:none; padding:0; margin:0;}
+.drop_cat ul li ul li{list-style-type:none; padding:1px 0 3px 8px; margin:0; text-align:left;}
+.drop_cat ul li ul li a{padding:0 0 0 17px; margin:0; text-decoration:none; background:url(../images/sub_cat_bullet.gif) no-repeat left 2px; font-weight:bold;}
+.drop_cat ul li ul li a:hover{padding:0 0 0 17px; margin:0; color:#353535; text-decoration:none; background:url(../images/home/sub_cat_bullet.gif) no-repeat left 2px;  font-weight:bold;}
+.clear{clear:both;}
+.ctr_content{text-align:left;}
+.next_prev {height:100px;}
+.next_prev a{color:#bb0000; text-decoration:none; font-weight:bold; font-size:11px; height:60px; }
+.next_prev .prev{background:url(../images/previous.jpg) no-repeat left top; padding:20px 0 0 85px; display:block; width:100px; text-align:left;}
+.next_prev .previous{background:url(../images/prev.jpg) no-repeat left top; padding:20px 0 0 85px; display:block; width:100px; text-align:left;}
+.next_prev .next{background:url(../images/next.jpg) no-repeat right top; padding:20px 85px 0 0; margin:0 20px 0 0; display:block; width:100px; text-align:right;}
+
+.footer{background:url(../images/footer_bg.gif) repeat-x left top #b1b1b1; width:100%;}
+.slider{width:960px; height:117px; background:url(../images/slider_bg.jpg) no-repeat center top; padding:0 20px;}
+.slider a{text-decoration:none;}
+.slider a:hover{text-decoration:none; color:#666666;}
+.lft_prev{width:110px; height:90px; float:left;}
+.lft_prev a{color:#000; font-size:12px;}
+
+.rgt_prev{width:110px; height:90px; float:right;}
+.rgt_prev a{color:#000; font-size:12px;}
+
+.slider_content{float:left; width:700px; height:70px; padding:20px 0 0 0;}
+.slider_content a{float:left; margin:0 5px 0 0;}
+.slider_content img{vertical-align:middle;}
+
+.foot_box{padding:0 0 0 50px;}
+.foot_box .box{background:url(../images/box_foot.png) no-repeat center top; padding:15px ; float:left; margin:0 40px 0 0; width:233px; height:112px;}
+.copy{font-size:11px;}
+.design_by{font-size:11px; color:#4b4b4b;}
+
+a { cursor:url(http://www.fresnod.com/orange.cur), auto; }

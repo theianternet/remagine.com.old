@@ -1,0 +1,51 @@
+# AuthType Basic
+#  AuthName "Authentication Required"
+#  AuthUserFile /var/.htpasswd
+#  Require valid-user
+#  Order deny,allow
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+#Caching to speed up page load
+<IfModule mod_expires.c>
+# Enable expirations
+ExpiresActive On
+# HTML
+ExpiresByType text/html "access plus 2 days"
+</IfModule>
+<ifModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault A86400
+ExpiresByType image/x-icon A2592000
+ExpiresByType application/x-javascript A2592000
+ExpiresByType text/css A2592000
+ExpiresByType image/gif A604800
+ExpiresByType image/png A604800
+ExpiresByType image/jpeg A604800
+ExpiresByType text/plain A604800
+ExpiresByType application/x-shockwave-flash A604800
+ExpiresByType video/x-flv A604800
+ExpiresByType application/pdf A604800
+ExpiresByType text/html A900
+ExpiresByType text/html "access plus 2 days"
+ExpiresDefault "access 2 days"
+</ifModule>
+
+#XSS Protection header found.
+<IfModule mod_headers.c>
+# Set XSS Protection header
+Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+#RewriteCond %{SERVER_PORT} 80
+#RewriteRule ^(.*)$ https://www.remagine.com/$1 [R=301,L]

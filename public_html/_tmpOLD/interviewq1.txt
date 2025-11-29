@@ -1,0 +1,23 @@
+Interview Exercise #1
+
+============================================================
+Create a simple user input form that uses a JavaScript RPC
+============================================================
+
+Requirements
+
+Script Language(s): PHP, JavaScript
+Libraries: jQuery
+Database: MySQL
+
+Step 1: Create a simple form for user input that uses the POST method to submit data via an RPC (Remote Procedure Call). User submitted data should appear on the same page right bellow the form, and without the page refreshing.
+
+Note: Use of AJAX and JSON is ideal for this exercise. This form must include the following fields: name, email, password (password must be hidden during input). Devise a solution that includes the JavaScript jQuery library.
+
+Step 2: Create a MySQL database to collect user input. The database table should include at least the following: id, name, email, password (password must be encrypted), datetime.
+
+Step 3: Comment your code at each major step. You do not need to comment every line. Just describe each primary function, and some of the internals.
+
+Step 4: Provide an on-line demo as well as an export of the completed database schema and script files.
+
+Happy Coding!

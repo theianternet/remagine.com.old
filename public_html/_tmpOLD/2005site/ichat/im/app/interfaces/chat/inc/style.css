@@ -1,0 +1,421 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	color: #444444;
+	font-family: Arial, Sans-Serif;
+	overflow: visible;
+}
+body, div, ul, a {
+	cursor: hand;
+}
+a {
+	text-decoration: none;
+}
+a.download {
+	font-weight: bold;
+}
+form {
+	margin: 30px;
+}
+	form input.text {
+		width: 100%;
+		font-size: 16px;
+	}
+	input.button {
+		font-size: 16px;
+	}
+#site {
+	width: 100%;
+	height: 320;
+	overflow: hidden;
+}
+#wide {
+	width: 2000%;
+	margin-top: 355px;
+}
+div.col {
+	width: 320px;
+	float: left;
+	min-height: 320px;
+	position: relative;
+}
+ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+	ul li {
+		border-bottom: 1px solid #E9E9E9;
+		background: url("../img/row-arrow.gif") right center no-repeat;
+	}
+		ul li a, ul li a:active, ul li div.story {
+			display: block;
+			padding: 6px;
+			padding-left: 42px;
+			color: #444444;
+			min-height: 18px;
+		}
+		ul li a div.spinner {
+			display: none;
+		}
+			ul li a.on div.spinner {
+				display: block;
+				float: right;
+				height: 16px;
+				color: #FFFFFF;
+				font-size: .7em;
+				font-style: italic;
+				margin-right: 10px;
+				margin-top: 6px;
+			}
+		ul li div.story {
+		}
+			ul li div.story div.diggs {
+				background: url("../img/shade-compact.gif") no-repeat;
+				color: rgb(147, 136, 63);
+				width: 36px;
+				height: 24px;
+				float: left;
+				text-align: center;
+				margin-left: -46px;
+				line-height: 1.9em;
+			}
+		ul li.on {
+			background: url("../img/row-repeat-x.gif") left bottom repeat-x #408cef;
+			color: #FFFFFF;
+		}
+			ul li.on div.story {
+				color: #FFFFFF;
+			}
+			ul li.on div.diggs {
+				background-image: none;
+				color: #FFFFFF;
+				border: 1px solid #FFFFFF;
+				width: 34px;
+				height: 22px;
+			}
+		ul li div.container {
+			font-size: .6em;
+			color: #888888;
+		}
+		ul li.on div.container {
+			color: #FFFFFF;
+		}
+#scroll {
+	background: #999999;
+	position: absolute;
+	right: 3px;
+	margin-top: 2px;
+	top: 0px;
+	height: 0px;
+	width: 4px;
+	z-index: 10;
+	display: none;
+}
+
+#chat {
+	width: 260px;
+	border: 3px solid #CCCCCC;
+}
+#chat #chat-history {
+	height: 220px;
+	overflow: auto;
+	padding: 2px;
+}
+#chat #talk {
+	background-color: #CCCCCC;
+	border-top: 3px solid #CCCCCC;
+	padding: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: center;
+}
+#chat #talk form {
+	margin: 0px;
+	padding: 0px;
+}
+#chat #talk form input.text{
+	width: 190px;
+}
+#chat #chat-history p {
+	margin: 0px;
+	padding: 0px;
+}
+
+#buddies {
+	
+}
+	#buddies li div.story {
+		background: url("../img/available.gif") 13px center no-repeat;
+	}
+		#buddies li.away div.story {
+			background: url("../img/away.gif") 13px center no-repeat;
+		}
+
+#xChat {
+	position: fixed;
+	top: 16px;
+	left: 10px;
+	z-index: 103;
+}
+
+#footer {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	padding-left: 16px;
+	padding-right: 0px;
+	z-index: 100;
+	background: url("../img/footer-repeat-x.png") left bottom repeat-x;
+	width: 288px;
+	height: 62px;
+}
+	#logoff {
+		position: absolute;
+		bottom: 0px;
+	}
+		div.username {
+			position: absolute;
+			left: 44px;
+			bottom: 25px;
+			font-size: 12px;
+			font-weight: bold;
+			color: #777777;
+		}
+	#goBack {
+		position: absolute;
+		bottom: 0px;
+	}
+	#tabs {
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		width: 70%
+	}
+		#tabs div {
+			margin-left: 6px;
+			float: right;
+			height: 50px;
+			background: none;
+			padding-top: 14px;
+		}
+			#tabs div.on {
+				background: url("../img/arrow-down.gif") center top no-repeat;
+			}
+			#tabs div img.dot {
+				display: none;
+			}
+			#tabs div.new img.dot {
+				display: block;
+				position: relative;
+				top: -55px;
+				left: -5px;
+			}
+		
+#sheet {
+	position: fixed;
+	z-index: 110;
+	background: #000000;
+	moz-opacity: .8;
+	opacity: .8;
+	width: 100%;
+	height: 100%;
+}
+	#sheet-content {
+		text-align: center;
+		font-weight: bold;
+		font-size: 1.5em;
+		margin-top: 100px;
+		color: #FFFFFF;
+	}
+
+#typing {
+	margin: 0px;
+	padding: 0px;
+	position: fixed;
+	bottom: 62px;
+	left: 0px;
+	z-index: 101;
+	width: 100%;
+}
+	#typing form {
+		margin: 0px;
+		padding: 16px;
+		padding-bottom: 0px;
+		padding-top: 5px;
+	}
+	#typing input {
+		border: 1px solid #777777;
+		display: block;
+		font-size: 12px;
+		padding: 10px;
+		width: 100%;
+	}
+
+div.history {
+	padding-bottom: 80px;
+	padding-bottom: 0px;
+}
+
+table.bubbleLeft {
+	margin-right: 29px;
+	margin-left: 20px;
+	margin-bottom: 6px;
+	clear: both;
+}
+	table.bubbleLeft td.topLeft {
+		width: 19px;
+		height: 10px;
+		background: url("../img/bubble1-left-topLeft.gif") no-repeat;
+	}
+	table.bubbleLeft div.bottomLeft {
+		width: 19px;
+		height: 12px;
+		background: url("../img/bubble1-left-bottomLeft.gif") no-repeat;
+	}
+	table.bubbleLeft td.topRight {
+		width: 10px;
+		height: 10px;
+		background: url("../img/bubble1-left-topRight.gif") no-repeat;
+	}
+	table.bubbleLeft div.bottomRight {
+		width: 10px;
+		height: 12px;
+		background: url("../img/bubble1-left-bottomRight.gif") no-repeat;
+	}
+	table.bubbleLeft td.left {
+		width: 19px;
+		height: 100%;
+		background: url("../img/bubble1-left-left-repeat-y.gif") repeat-y;
+		vertical-align: bottom;
+	}
+	table.bubbleLeft td.right {
+		width: 10px;
+		height: 100%;
+		background: url("../img/bubble1-left-right-repeat-y.gif") repeat-y;
+		vertical-align: bottom;
+	}
+	table.bubbleLeft td.center {
+		padding: 0px;
+		background: url("../img/bubble1-left-bottom-repeat-x.gif") left bottom repeat-x #dbe0ea;
+	}
+	table.bubbleLeft div.bottom {
+		margin: 0px;
+		min-height: 10px;
+		background: url("../img/bubble1-left-top-repeat-x.gif") left top repeat-x;
+	}
+	table.bubbleLeft td.center div.message {
+		padding: 4px;
+		padding-bottom: 0px;
+		padding-top: 0px;
+		position: relative;
+		top: -6px;
+		font-size: 13px;
+	}
+
+
+	table.bubbleRight {
+		margin-right: 20px;
+		margin-left: 29px;
+		margin-bottom: 6px;
+		float: right;
+		clear: both;
+	}
+		table.bubbleRight td.topLeft {
+			width: 10px;
+			height: 10px;
+			background: url("../img/bubble1-right-topLeft.gif") no-repeat;
+		}
+		table.bubbleRight div.bottomRight {
+			width: 19px;
+			height: 12px;
+			background: url("../img/bubble1-right-bottomRight.gif") no-repeat;
+		}
+		table.bubbleRight td.topRight {
+			width: 19px;
+			height: 10px;
+			background: url("../img/bubble1-right-topRight.gif") no-repeat;
+		}
+		table.bubbleRight div.bottomLeft {
+			width: 10px;
+			height: 12px;
+			background: url("../img/bubble1-right-bottomLeft.gif") no-repeat;
+		}
+		table.bubbleRight td.right {
+			width: 10px;
+			height: 100%;
+			background: url("../img/bubble1-right-right-repeat-y.gif") repeat-y;
+			vertical-align: bottom;
+		}
+		table.bubbleRight td.left {
+			width: 10px;
+			height: 100%;
+			background: url("../img/bubble1-right-left-repeat-y.gif") repeat-y;
+			vertical-align: bottom;
+		}
+		table.bubbleRight td.center {
+			padding: 0px;
+			background: url("../img/bubble1-right-bottom-repeat-x.gif") left bottom repeat-x #EEEEEE;
+		}
+		table.bubbleRight div.bottom {
+			margin: 0px;
+			min-height: 10px;
+			background: url("../img/bubble1-right-top-repeat-x.gif") left top repeat-x;
+		}
+		table.bubbleRight td.center div.message {
+			padding: 4px;
+			padding-bottom: 0px;
+			padding-top: 0px;
+			position: relative;
+			top: -6px;
+			font-size: 13px;
+		}
+
+
+div.userLeft {
+	font-size: 12px;
+	float: left;
+	clear: both;
+	margin-left: 16px;
+	margin-bottom: 6px;
+}
+div.userRight {
+	font-size: 12px;
+	float: right;
+	clear: both;
+	margin-right: 16px;
+	margin-bottom: 6px;
+}
+div.systemMessage {
+	font-size: 12px;
+	text-align: center;
+	clear: both;
+	margin-left: 16px;
+	margin-right: 16px;
+	margin-bottom: 6px;
+	color: #999999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

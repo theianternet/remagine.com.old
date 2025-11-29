@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.google.com/schemas/sitemap/0.84"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.google.com/schemas/sitemap/0.84
+                      http://www.google.com/schemas/sitemap/0.84/sitemap.xsd">
+
+<url>
+  <loc>http://www.remagine.net/</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/main.php?section=isolutions</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/main.php?section=telecom</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/main.php?section=datam</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/main.php?section=mission</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/main.php?section=support</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/main.php?section=aboutus</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/main.php?section=affiliates</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/main.php?section=contact</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/photo.php</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/main.php?section=press</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/rdnslogs/</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/news/therepublican/031206_1.html</loc>
+  <priority>0.5</priority>
+  <lastmod>2006-11-21T17:08:47+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/news/therepublican/compphoto.html</loc>
+  <priority>0.5</priority>
+  <lastmod>2006-11-21T17:08:47+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/news/stcc/articles/sudoku.pdf</loc>
+  <priority>0.5</priority>
+  <lastmod>2006-11-21T17:08:47+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/news/stcc/articles/STCCMSENpp217-233.pdf</loc>
+  <priority>0.5</priority>
+  <lastmod>2006-11-21T17:08:47+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/news/stcc/articles/indexJava.html</loc>
+  <priority>0.5</priority>
+  <lastmod>2006-11-21T17:08:47+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/news/wnec/</loc>
+  <priority>0.5</priority>
+  <lastmod>2006-11-21T17:08:47+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/news/wnec/communicatorfall04.pdf</loc>
+  <priority>0.5</priority>
+  <lastmod>2006-11-21T17:08:47+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/news/unionnews/index.html</loc>
+  <priority>0.5</priority>
+  <lastmod>2006-11-21T17:08:47+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/news/therepublican/031206_2.html</loc>
+  <priority>0.5</priority>
+  <lastmod>2006-11-21T17:08:47+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/news/wnec/B7EB2838.html</loc>
+  <priority>0.5</priority>
+  <lastmod>2006-11-21T17:08:47+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/news/wnec/B7EB2853.html</loc>
+  <priority>0.5</priority>
+  <lastmod>2006-11-21T17:08:47+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/news/wnec/B7EB2870.html</loc>
+  <priority>0.5</priority>
+  <lastmod>2006-11-21T17:08:47+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.remagine.net/news/wnec/index.html</loc>
+  <priority>0.5</priority>
+  <lastmod>2006-11-21T17:08:47+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+</urlset>

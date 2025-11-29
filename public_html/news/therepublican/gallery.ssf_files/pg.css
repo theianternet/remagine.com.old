@@ -1,0 +1,53 @@
+.header td { font-family: Arial,sans-serif; font-size: x-small }
+.header h2 { font-size: 20px; font-weight: bold; margin: 4px 0px 4px 0px; padding: 0px; color: #404145 }
+.header a { color: #000; text-decoration: none }
+.header a:hover { text-decoration: underline }
+.header a:visited { color: #000 }
+
+.cwc td { font-family: Arial,sans-serif; font-size: x-small }
+.cwc a { color: #DE5200; text-decoration: none }
+.cwc a:hover { text-decoration: underline }
+.cwc a:visited { color: #DE5200 }
+.cwc u { color: #DE5200; text-decoration: none }
+
+.cwe td { color: #FFF; font-family: Arial,sans-serif; font-size: x-small }
+.cwe a { color: #FFF200; text-decoration: none }
+.cwe a:hover { text-decoration: underline }
+.cwe a:visited { color: #FFF200 }
+.cwe u { color: #FFF200; text-decoration: none }
+.cwe s { color: #C1C1C1; text-decoration: none; font-size: 10px }
+.cwe h2 { font-size: 25px; font-weight: bold; margin: -5px 0px 1px 0px; padding: 0px; color: #FFF }
+
+.yel td { color: #FDFAC5; font-family: Arial,sans-serif; font-size: 10px }
+.yel a { color: #FDFAC5; text-decoration: none }
+.yel a:hover { text-decoration: underline }
+.yel a:visited { color: #FDFAC5 }
+
+.white { color: #FFF; font-weight: bold }
+
+.wl a { color: #FFF; text-decoration: none }
+.wl a:hover { text-decoration: underline }
+.wl a:visited { color: #FFF }
+.wl u { color: #FFF; text-decoration: none }
+
+.ml { margin: 0px }
+.ml table { margin-left: 10px }
+
+.psrr div { margin-top: 10px }
+
+.ps { border: 1px solid #ACADAF; background-color: #D7D8DB }
+.ps a { color: #575858; text-decoration: none }
+.ps a:hover { text-decoration: underline }
+.ps a:visited { color: #575858 }
+.ps div { margin: 3px 0px 3px 0px; font-size: 11px; text-align: center }
+.ps img { margin: 5px 0px 5px 0px }
+.ps u { color: #900; text-decoration: none }
+.ps s { color: #F00; text-decoration: none }
+.ps a.h2 { color: #F00 }
+.ps a.h2:visited { color: #F00 }
+
+.pstn { border: 1px solid #ACADAF; background-color: #D7D8DB; margin: 10px 0px 10px 0px }
+.pstn td { text-align: center }
+.pstn img { margin: 10px 0px 10px 0px }
+
+.sr img	{ margin: 5px 0px 5px 0px; text-align: center }

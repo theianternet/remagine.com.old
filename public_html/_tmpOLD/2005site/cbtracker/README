@@ -1,0 +1,168 @@
+CheckBook Tracker Copyright (c) 2002-2003 Anthony Maro
+This program is covered under the GPL license (see license.txt)
+
+This is the ELF executable (that means, you run the program "cbtracker" 
+from the command prompt or make an icon for it with the included icon 
+file in your desktop environment.)
+
+
+-Tony Maro
+http://tony.maro.net/
+
+Version History
+
+9/25/03 Version 1.0a
+Fixed startup crash caused by auto-entered scheduled transactions
+ (was introduced by speed enhancements in version 1.0)
+Fixed tab bugs, enhanced tab response
+
+9/9/03 Version 1.0
+Added import from CBB (old CheckBook Blancer for X Windows)
+Addressed date display not setting date right on first use
+Fixed display update bug on Cash Flow page
+Added Payee transaction report (right click on transaction to get it)
+Fixed extra delay at loading/saving data (start and end of app)
+Fixed forecast graph speed problems
+Fixed tax report not reporting on split categories
+Other miscellaneous bugs squished and fixed
+
+6/23/03 Version 0.9.9
+Changed various button sizes due to theme issues
+Fixed crash and possible data loss due to forecast graph
+Added additional sound support using Linux "play" command
+Continued to prepare components for version 2.0 use
+
+4/25/03 Version 0.9.8
+Added MRU
+Other Miscellaneous bugs fixed
+Added keyboard controls to scroll register
+Added dynamically sized row heights and column widths to register
+Tweaked graph steps
+Made category graph report split transactions properly
+Changed AutoFill to ignore void transactions
+Changed AutoFill to not fill in the memo field
+Fixed clearing all data when creating a new file
+Added extra fonts option
+Added 3D and smoothing options for line graph
+Added beginnings of context sensitive help system
+Fixed check number sorting order
+Fixed bug where sorting only worked if scrolled to the top
+Added input mask for date entry
+Fixed spelling error on check printing
+Fixed calendar control not taking input
+Fixed minor display bugs in ribbon graph
+Fixed matching bug in OFX that might allow matching against reconciled transactions (doh!)
+Changed line graph to 3D "ribbon" graph
+
+3/28/03 Version 0.9.7c
+User interface enhancements
+Fix reporting bug on XML Tax Report not showing split categories
+Compartmentalized code preparing to begin on version 2
+
+3/24/03 Version 0.9.7
+Added integrated category management
+Added transactions XML report
+Added XML tax report
+Fixed support for floppy located at /floppy or /mnt/floppy (I think)
+Fixed selection bug when setting new Debit or Print scheduled transactions
+Fixed balance history displaying wrong when sort was not date
+Fixed disabling balance by OFX when not on account tab
+Fixed display bug with empty graph
+Adjusted range on forecast page scrollbar
+Removed unnecessary form (Working...) can't even remember what it was for!
+Added --nosound option in case sound causes problems (turns it off in the XML
+  settings so there is no need to repeatedly use this option)
+
+3/22/03 Version 0.9.6c
+Added online banking with transaction matching for balancing
+Got tabs working half way in the transaction entry (forwards not backwards)
+Rewrite scrollbar components to fix handle size problem and allow for millions of transactions
+Added RETURN to trigger default click of OK button on transaction
+Added RETURN to trigger new withdrawal when focused on register
+Added keyboard shortcut to create a new check for printing
+Added ugly hack to fix the positioning of the transaction entry notebook control
+Added workaround for GTK+ LCL bug causing crash at startup for new users
+Added double-buffering for scheduled register and graph
+
+3/17/03 Version 0.9.6
+Allows sorting by date or transaction number
+Modal forms now stay on top like good little modal forms should
+Fixed scheduled item radio buttons
+Fixed Bills disallowing selection
+Fixed problems with checked menu options
+Fixed crash when double-click check register header line
+Fixed crashes related to sound when eSound is not present
+Added option for selecting the register font
+Added mouseover hint for graphs
+Added check to prevent reuse of check numbers
+Added keyboard shortcuts for new transactions
+
+2/28/03
+I want to take this opportunity to honor the memory of my father who passed away
+this week.  If it wasn't for his teaching, indulging and encouraging, I wouldn't
+be coding this or any software.  One of my best memories is when I was about
+8 years old he would take me to work to help him run the card sorting machine
+on the government computer he worked with.  The first complete program I wrote
+was when I was 15... I wrote a comprehensive accounting package for the Commodore
+64 so he could do his business finances for the shop he owned.  Hard to believe
+it all fit on a 360k 5 1/4" floppy disk, eh?
+
+12/10/02 Version 0.9.5
+Fixed crash bug related to auto-entered transactions
+Fixed auto-entered transactions refusing to enter as proper transaction type
+Fixed EVEN MORE QIF import issues with older quicken files
+Fixed check printing capitalization to be more uniform
+Redesigned sound subsystem to be more stable and work with more distros
+Added sorting for scheduled transactions by date
+Added icons to menu items
+Added manual backup to floppy option
+More behind-the-scenes changes for future enhancements
+A few other minor bug fixes
+
+11/3/02 Version 0.9.4
+Added balance history report
+Added category piechart report
+Fixed error on new startup that allowed controls to be active with no open file
+Fixed default tab on startup to be withdrawal
+
+10/24/02 Version 0.9.3a
+Fixed issues regarding importing non-Y2K compliant QIF files
+Fixed other QIF import issues to attempt to catch invalid data
+
+10/22/02 Version 0.9.3
+Added ability to print checks on standard 3-up computer checks
+Added support for split transactions
+Added sound support using esound (esdlib)
+
+10/13/02 Version 0.9.2
+Added ability to modify individual scheduled entry and flags it with icon
+Added creation of basic categories with new file
+Added backup to floppy every 14 days
+Added splash screen at start for loading large checkbook data files
+Added combobox selection for forecast length in days
+Added category type verification on new transaction entry
+Added create category when setting scheduled transaction up
+Added auto-entered scheduled transactions to enter at startup
+Fixed graph to display in more even increments for larger $ amounts
+Fixed scrolling bug on checkbook where display would disappear until scrolled
+Fixed memory leaks with modified schedule transactions
+Fixed bug where categories with no subcats didn't show in drop-down lists
+Fixed money display problem in forecast graph
+Fixed auto-fill transaction issues on deposits
+Fixed auto-complete issues
+Fixed forecast screen update issues with modified transactions
+
+10/6/02 Version 0.9.1a
+Fixed bug where loading a new file wouldn't clear the scheduled transactions
+
+10/5/02 Version 0.9.1
+Added many features including scheduled transactions and balance forecasts
+Fixed minor bugs
+Removed debug code to shring executable size
+Encapsulated graphics into the executable, so no graphic files are required
+
+9/25/02 Version 0.9.0a
+Fixed problem with older distributions and old pixbuf libraries
+
+9/22/02 Version 0.9.0
+Initial public release

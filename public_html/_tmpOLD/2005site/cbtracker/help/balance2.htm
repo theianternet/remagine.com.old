@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>CheckBook Tracker Help Contents</title>
+</head>
+  <body>
+ 
+<table cellpadding="2" cellspacing="2" border="0" width="100%">
+   <tbody>
+     <tr>
+       <td valign="top" align="left"> <a href="http://tony.maro.net/"><img
+ src="cbt.gif" border="0" alt="CBT" width="118" height="84" align="left">
+      </a>       
+      <h4>CheckBook Tracker</h4>
+ GPL (C) 2003 Anthony Maro </td>
+     </tr>
+     <tr>
+       <td valign="top"><a href="contents.htm">Contents</a></td>
+     </tr>
+   
+  </tbody> 
+</table>
+ 
+<hr> 
+<h4><font color="#006600">Balancing from an OFX file</font></h4>
+Many banks now offer download of OFX (Open Financial Exchange) files. &nbsp;
+If your bank offers this feature on their website, you can download OFX files
+and have the data within them matched up against the information already
+in CheckBook Tracker. &nbsp; CBT attempts to intelligently match up transactions
+using a complex set of rules.<br>
+<br>
+Balancing from OFX files takes much of the headache out of balancing your
+checkbook. &nbsp;You can even balance your checkbook weekly or even daily,
+rather than waiting for the monthly statement from your bank. &nbsp;I commonly
+use a debit card and use the OFX balancing to automatically enter those transactions
+into CBT.<br>
+<br>
+To use balancing from OFX, download the latest OFX file from your bank. &nbsp;Some
+banks will even keep up with what transactions you have already downloaded
+and give you the option to only download new transactions. &nbsp;This will
+reduce the possibility of mismatched transactions.<br>
+<br>
+Once the OFX file has been downloaded from your bank, open CBT and select
+"Balance from OFX" in the "Tools" menu. &nbsp;Select the OFX file.<br>
+<br>
+Any transactions that it thinks may have been keyed into CBT incorrectly,
+or that may have some other error will pop up a confirmation box before a
+match is made. &nbsp;Once the file has been imported, a summary appears showing
+how many transactions were found and how many new transactions were entered
+into the register. &nbsp;The checkbook register is then placed into balancing
+mode, allowing you to double-check the information before completing the
+balancing process.<br>
+<br>
+If you find that a transaction has not matched correctly, you can make adjustments
+before clicking "Done."<br>
+<br>
+Here's a quick list of basic rules that CBT uses when matching transactions:<br>
+<ul>
+  <li>All transactions in the OFX file older than one day before the last
+balance date are ignored</li>
+  <li>Any transactions stored in CBT flagged as matched already are ignored
+(as tracked by the FITID)</li>
+  <li>Any transaction in the OFX that has an FITID matching a transaction
+stored in CBT is ignored<br>
+  </li>
+  <li>Check numbers are attempted to be matched exactly</li>
+  <li>If both check number and amount matches within a 15 day period, a match
+is assumed</li>
+  <li>If debit amount matches on a non-check transaction within a 5 day period,
+a match is assumed</li>
+  <li>If deposit amount matches within a 5 day period, a match is assumed</li>
+  <li>Anything else may result in a confirmation request</li>
+</ul>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,71 @@
+A:LINK 
+{
+	color: #3F4DF9;
+text-decoration: underline; 
+}
+
+a:visited
+{ 
+        color: #3F4DF9;
+text-decoration: underline;
+}
+a:active 
+
+{
+        color: #3F4DF9;
+text-decoration: underline;
+}
+
+
+a:hover
+{
+	color: #3F4DF9;
+text-decoration: none; 
+}
+
+
+.text 
+{  
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+font-size: 11px; 
+font-style: normal; 
+font-weight: normal; 
+font-variant: normal; 
+color: #333333
+}
+
+.whttext
+{
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+color: #ffffff
+}
+
+.bold_text 
+{  
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+font-size: 10px; 
+font-style: normal; 
+line-height: normal; 
+font-weight: bold; 
+font-variant: normal
+}
+
+.smalltext 
+{  
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+font-size: 9px; 
+}
+
+.TxtBox 		
+{ 
+font-family: Geneva, Arial, Helvetica; 
+font-size: 10px; 
+color: #333333; 
+font-weight: normal ; 
+background-color: #DFDFDF;
+}
+

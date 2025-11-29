@@ -1,0 +1,4 @@
+AuthName "RESTRICTED"
+        AuthType Basic
+        AuthUserFile /home/kenpo/.htpasswd
+        Require user kenpo

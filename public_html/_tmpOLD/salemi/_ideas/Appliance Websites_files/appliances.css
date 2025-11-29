@@ -1,0 +1,31 @@
+/* CSS Document */
+
+/*themes appliances css*/
+body {font:12px "Arial"; color: #000; height:100%; background:url(../images/appliances/bg.jpg) repeat-x center top #b1b1b1;}
+.lft_panel_bot{background:url(../images/appliances/lft_bot_bg.gif) no-repeat left top; padding:5px 0; width:220px; text-align:right;}
+.lft_panel a{text-decoration:none; background:url(../images/appliances/lft_link_bg.gif) no-repeat left top; display:block; padding:10px 45px 10px 0; margin:0 0 0 2px;}
+.drop_cat{background:url(../images/appliances/lftmenu_bg.gif) repeat-y left top; padding:5px 05px 2px 0;  width:220px; text-align:right;}
+.lft_panel h1{background:url(../images/appliances/lftmenu_topbg.gif) no-repeat left top; padding:8px 0 7px 25px; margin:0; font-size:12px; color:#fff;}	
+.drop_cat ul li ul li a{color:#0054a6;}
+
+.drop_cat ul li ul li a {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:transparent url(../images/sub_cat_bullet_green.gif) no-repeat scroll left 2px;
+font-weight:bold;
+margin:0;
+padding:0 0 0 17px;
+text-decoration:none;
+}
+
+.drop_cat ul li ul li a:hover {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:transparent url(../images/sub_cat_bullet_green.gif) no-repeat scroll left 2px;
+font-weight:bold;
+margin:0;
+padding:0 0 0 17px;
+text-decoration:none;
+}
